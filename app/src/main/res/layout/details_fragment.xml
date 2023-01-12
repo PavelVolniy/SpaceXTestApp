@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="5dp">
+
+  <TextView
+    android:id="@+id/tv_title_name"
+    style="@style/text_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SES-22"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+    android:id="@+id/iv_large_icon"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_corner_radius_20dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_title_name"
+    android:contentDescription="@string/text_content_description_icon_of_image_small_size" />
+
+  <LinearLayout
+    android:id="@+id/ll_titles"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="@id/iv_large_icon"
+    app:layout_constraintEnd_toStartOf="@id/ll_dates"
+    app:layout_constraintStart_toEndOf="@+id/iv_large_icon"
+    app:layout_constraintTop_toTopOf="@+id/iv_large_icon">
+
+    <TextView
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/text_main_list_item_cores_flight" />
+
+    <TextView
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/text_crew_item_status" />
+
+    <TextView
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/text_crew_item_time_start_flight" />
+
+    <TextView
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/text_crew_item_date_start_flight" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/ll_dates"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="@id/ll_titles"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/ll_titles"
+    app:layout_constraintTop_toTopOf="@+id/ll_titles">
+
+    <TextView
+      android:id="@+id/tv_cores_flight"
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="2" />
+
+    <TextView
+      android:id="@+id/tv_status"
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="true" />
+
+    <TextView
+      android:id="@+id/tv_time"
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="ЧЧ-ММ" />
+
+    <TextView
+      android:id="@+id/tv_date"
+      style="@style/text_attributes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="ДД-ММ-ГГГГ" />
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/tv_details"
+    style="@style/text_attributes"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/text_crew_item_example_details"
+    android:textAlignment="viewStart"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/iv_large_icon" />
+
+  <TextView
+    android:id="@+id/tv_crew_list_title"
+    style="@style/text_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/text_title_crew_list"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tv_crew_list_title"
+    tools:listitem="@layout/crew_list_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

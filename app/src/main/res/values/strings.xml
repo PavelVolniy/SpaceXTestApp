@@ -1,0 +1,13 @@
+<resources>
+  <string name="app_name">SpacesXTestApp</string>
+  <string name="text_main_list_item_cores_flight">cores flight</string>
+  <string name="text_main_list_item_status">status: </string>
+  <string name="text_crew_item_example_details">GFZ arranged a rideshare of GRACE-FO on a Falcon 9 with Iridium following the cancellation of their Dnepr launch contract in 2015. Iridium CEO Matt Desch disclosed in September 2017 that GRACE-FO would be launched on the sixth Iridium NEXT mission. The booster reuse turnaround was a record 4.5 months between flights.</string>
+  <string name="text_crew_item_name">name</string>
+  <string name="text_crew_item_agency">agency</string>
+  <string name="text_crew_item_status">status</string>
+  <string name="text_crew_item_time_start_flight">time start flight</string>
+  <string name="text_crew_item_date_start_flight">date start flight</string>
+  <string name="text_content_description_icon_of_image_small_size">icon of image small size</string>
+  <string name="text_title_crew_list">crew list</string>
+</resources>
