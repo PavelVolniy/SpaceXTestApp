@@ -30,14 +30,7 @@ class MainViewModel @Inject constructor(
     val data = api.getFlightList("5")
     val dataFlightList = mutableListOf<JsonSpaceXDataItem>()
     data.map {
-      if (it.id != null
-        && it.name != null
-        && it.cores[0].flight != null
-        && it.date_utc != null && it.date_utc > "2021-01-01T00:00:00.000Z" //sort by date
-        && it.success != null
-        && it.links.patch.small != null
-        && it.details != null
-      ) dataFlightList.add(it)
+      if (checkNullFields(it)) dataFlightList.add(it)
     }
     return dataFlightList.map {
       FlightListItem(
@@ -51,5 +44,16 @@ class MainViewModel @Inject constructor(
         details = it.details
       )
     }
+  }
+
+  private fun checkNullFields(item: JsonSpaceXDataItem): Boolean {
+    return item.id != null
+        && item.name != null
+        && item.cores[0].flight != null
+        && item.date_utc != null
+        && item.date_utc > "2021-01-01T00:00:00.000Z" //filter by date
+        && item.success != null
+        && item.links.patch.small != null
+        && item.details != null
   }
 }
