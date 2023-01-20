@@ -11,4 +11,6 @@
   <color name="base_white">#FAFAFA</color>
   <color name="bg_app">#CAC4C4</color>
   <color name="item_crew_color">#EDC9C9</color>
+  <color name="bg_list_item">#CBF8AA37</color>
+  <color name="bg_small_icon">#19F8AA37</color>
 </resources>

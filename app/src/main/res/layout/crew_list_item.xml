@@ -6,43 +6,15 @@
   android:layout_margin="4dp"
   android:background="@drawable/bg_corner_radius_10dp"
   android:backgroundTint="@color/item_crew_color"
-  android:padding="3dp">
+  android:padding="4dp">
 
-  <LinearLayout
-    android:id="@+id/ll_title_crew"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintTop_toTopOf="parent">
-
-    <TextView
-      style="@style/text_attributes"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="2"
-      android:text="@string/text_crew_item_name" />
-
-    <TextView
-      style="@style/text_attributes"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:text="@string/text_crew_item_agency" />
-
-    <TextView
-      style="@style/text_attributes"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:text="@string/text_crew_item_status" />
-  </LinearLayout>
 
   <LinearLayout
     android:id="@+id/ll_data_crew"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    app:layout_constraintTop_toBottomOf="@+id/ll_title_crew">
+    app:layout_constraintTop_toTopOf="parent">
 
     <TextView
       android:id="@+id/tv_name_crew_item"
@@ -50,7 +22,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="2"
-      android:text="Some Jakob" />
+      />
 
     <TextView
       android:id="@+id/tv_agency_crew_item"
@@ -58,7 +30,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="NASA" />
+       />
 
     <TextView
       android:id="@+id/tv_status_crew_item"
@@ -66,7 +38,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="active" />
+      />
   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

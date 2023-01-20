@@ -11,6 +11,7 @@
     style="@style/text_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:text="name"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +69,7 @@
     android:gravity="start"
     android:orientation="vertical"
     app:layout_constraintBottom_toBottomOf="@id/ll_titles"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/ll_title_crew"
     app:layout_constraintStart_toEndOf="@+id/ll_titles"
     app:layout_constraintTop_toTopOf="@+id/ll_titles">
 
@@ -77,28 +78,28 @@
       style="@style/text_attributes"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      />
+      android:text="1" />
 
     <TextView
       android:id="@+id/tv_status"
       style="@style/text_attributes"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      />
+      android:text="false" />
 
     <TextView
       android:id="@+id/tv_time"
       style="@style/text_attributes"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      />
+      android:text="HH-MM" />
 
     <TextView
       android:id="@+id/tv_date"
       style="@style/text_attributes"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      />
+      android:text="DD-MM-YYYY" />
 
   </LinearLayout>
 
@@ -121,14 +122,16 @@
     android:layout_height="wrap_content"
     android:text="@string/text_title_crew_list"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/tv_details" />
+    app:layout_constraintStart_toStartOf="@id/tv_title_name"
+    app:layout_constraintTop_toTopOf="parent" />
 
   <LinearLayout
     android:id="@+id/ll_title_crew"
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/tv_title_name"
     app:layout_constraintTop_toBottomOf="@id/tv_crew_list_title">
 
     <TextView
@@ -156,11 +159,13 @@
 
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/container"
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="0dp"
     android:orientation="vertical"
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/tv_details"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/ll_title_crew"
     app:layout_constraintTop_toBottomOf="@id/ll_title_crew"
     tools:listitem="@layout/crew_list_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
